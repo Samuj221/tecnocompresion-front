@@ -1,0 +1,106 @@
+/* ===============================
+   HERO PRODUCTO
+================================ */
+.product-hero {
+  padding: 120px 24px 80px;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(2,6,23,0.9),
+    #020617
+  );
+}
+
+.product-hero h1 {
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.product-hero p {
+  max-width: 760px;
+  margin: auto;
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* ===============================
+   DETALLE PRODUCTO
+================================ */
+.product-detail {
+  padding: 100px 24px;
+  background: #020617;
+}
+
+.product-layout {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* TEXTO */
+.product-info h2 {
+  color: #22c55e;
+  margin-bottom: 24px;
+  font-size: 2rem;
+}
+
+.product-info h3 {
+  margin-top: 42px;
+  margin-bottom: 18px;
+  color: #e5e7eb;
+}
+
+.product-info p {
+  color: #cbd5f5;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.product-info ul {
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
+.product-info li {
+  margin-bottom: 10px;
+  color: #cbd5f5;
+  list-style: disc;
+}
+
+/* MARCAS */
+.brands {
+  columns: 2;
+}
+
+/* BOTÓN */
+.product-info .btn-primary {
+  margin-top: 40px;
+  display: inline-block;
+}
+
+
+/* IMAGEN */
+.product-image img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.55);
+  object-fit: cover;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .brands {
+    columns: 1;
+  }
+}

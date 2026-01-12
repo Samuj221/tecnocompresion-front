@@ -1,0 +1,377 @@
+/* HERO */
+.home-hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,.75), #020617),
+              url("../img/hero-industrial.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-hero-content {
+  text-align: center;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.home-hero h1 {
+  color: #fff;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.home-hero p {
+  margin: 16px auto 32px;
+  color: #94a3b8;
+}
+
+/* BOTÓN */
+.btn-primary {
+  padding: 14px 44px;
+  background: #22c55e;
+  color: #000;
+  font-weight: bold;
+  border-radius: 40px;
+  display: inline-block;
+  transition: .3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+/* SECCIONES */
+.home-intro,
+.home-services,
+.home-products,
+.home-process {
+  padding: 90px 24px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  color: #22c55e;
+  margin-bottom: 20px;
+}
+
+/* SERVICES GRID */
+.services-grid,
+.products-grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 50px;
+}
+
+/* CARDS */
+.service-card,
+.product-card {
+  background: rgba(255,255,255,.04);
+  padding: 30px;
+  border-radius: 24px;
+  transition: .4s;
+}
+
+.service-card:hover,
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card h3,
+.product-card h3 {
+  color: #22c55e;
+  margin-bottom: 12px;
+}
+
+.service-card p,
+.product-card p {
+  color: #cbd5f5;
+}
+
+.service-card a {
+  display: inline-block;
+  margin-top: 16px;
+  color: #22c55e;
+}
+
+/* PROCESS */
+.home-process {
+  background: radial-gradient(circle at top, #020617, #000);
+}
+
+.process-steps {
+  max-width: 1000px;
+  margin: 60px auto 0;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.step span {
+  font-size: 2rem;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.step p {
+  margin-top: 10px;
+  color: #cbd5f5;
+}
+
+/* CTA */
+.home-cta {
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.home-cta h2 {
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+/* ===============================
+   ANIMACIONES DE ENTRADA
+================================ */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+[data-animate="left"] {
+  transform: translateX(-50px);
+}
+
+[data-animate="right"] {
+  transform: translateX(50px);
+}
+
+[data-animate="zoom"] {
+  transform: scale(0.9);
+}
+
+[data-animate].active {
+  opacity: 1;
+  transform: none;
+}
+
+section {
+  position: relative;
+}
+
+section:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,.08),
+    transparent
+  );
+}
+/* ===============================
+   ANIMACIONES MODERNAS
+================================ */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(50px) scale(0.96);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.22,1,.36,1);
+  will-change: transform, opacity;
+}
+
+[data-animate].active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Delay opcional */
+[data-delay="1"] { transition-delay: .1s; }
+[data-delay="2"] { transition-delay: .2s; }
+[data-delay="3"] { transition-delay: .3s; }
+[data-delay="4"] { transition-delay: .4s; }
+
+.section-subtitle {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: #94a3b8;
+  font-size: 1.05rem;
+}
+
+/* Ajuste grids */
+.services-6 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.products-4 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Cards como links */
+.service-card,
+.product-card {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+.service-card span,
+.product-card span {
+  display: inline-block;
+  margin-top: 14px;
+  color: #22c55e;
+  font-weight: 500;
+}
+
+/* Hover más premium */
+.service-card:hover,
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+/* GRID EXACTO 3x2 */
+.services-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .services-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-6 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PRODUCTS */
+.products-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .products-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* CARD VISUAL */
+.service-card,
+.product-card {
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 26px;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+/* OVERLAY */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.85),
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.15)
+    );
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: background .4s ease;
+}
+
+.card-overlay h3 {
+  color: #22c55e;
+  margin-bottom: 8px;
+}
+
+.card-overlay p {
+  color: #e5e7eb;
+  font-size: .95rem;
+}
+
+/* HOVER */
+.service-card:hover,
+.product-card:hover {
+  transform: translateY(-12px) scale(1.03);
+}
+
+.service-card:hover .card-overlay,
+.product-card:hover .card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.95),
+    rgba(0,0,0,.45)
+  );
+}
+
+.reveal-text {
+  overflow: hidden;
+}
+
+.reveal-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(120%);
+  animation: revealChar .6s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+@keyframes revealChar {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+[data-animate] {
+  opacity: 0;
+  transform: translateY(60px) scale(.96);
+}
+
+[data-animate].active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.22,1,.36,1);
+}
+.service-card::after,
+.product-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.18),
+    transparent
+  );
+  transform: translateX(-100%);
+}
+
+.service-card:hover::after,
+.product-card:hover::after {
+  transform: translateX(100%);
+  transition: transform .8s ease;
+}

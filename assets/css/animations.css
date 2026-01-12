@@ -1,0 +1,10 @@
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s cubic-bezier(.2,.8,.2,1);
+}
+
+[data-animate].active {
+  opacity: 1;
+  transform: translateY(0);
+}
