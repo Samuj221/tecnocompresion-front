@@ -1,134 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Productos Industriales | Tecno Compresión SAS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos | Tecnocompresiones S.A.S</title>
 
-  <!-- ===============================
-       CSS GLOBAL
-  ================================ -->
-  <link rel="stylesheet" href="/assets/css/base.css">
-  <link rel="stylesheet" href="/assets/css/header.css">
-  <link rel="stylesheet" href="/assets/css/footer.css">
-  <link rel="stylesheet" href="/assets/css/whatsapp.css">
+  <!-- Base -->
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/header.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
 
-  <!-- ===============================
-       CSS PÁGINA PRODUCTOS
-  ================================ -->
-  <link rel="stylesheet" href="/assets/css/productos.css">
-
-  <!-- ===============================
-       GOOGLE FONT (INTER)
-  ================================ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Productos -->
+  <link rel="stylesheet" href="../assets/css/productos.css" />
 </head>
-
 <body>
 
-  <!-- HEADER DINÁMICO -->
-  <div class="header-spacer"></div>
+  <header id="header"></header>
 
-  <!-- ===============================
-       HERO PRODUCTOS
-  ================================ -->
-  <section class="hero-products">
-    <div class="section-inner text-center">
-      <h1 data-animate>Productos Industriales</h1>
-      <p data-animate data-delay="1">
-        Soluciones técnicas de alto rendimiento para sistemas de compresión y procesos industriales.
-      </p>
+  <!-- HERO -->
+  <section class="products-hero">
+    <div class="hero-content">
+      <h1>Nuestros Productos</h1>
+      <p>Soluciones industriales fabricadas con precisión, calidad y confiabilidad</p>
     </div>
   </section>
 
-  <!-- ===============================
-       GRID DE PRODUCTOS
-  ================================ -->
-  <section class="products-section">
-    <div class="section-inner">
+  <!-- PRODUCTOS -->
+  <section class="products-container">
 
-      <div class="products-grid">
-
-        <!-- PRODUCTO 1 -->
-        <article class="product-card" data-animate>
-          <img src="/assets/img/productos/anillos.jpg" alt="Anillos de sellado industrial">
-          <h3>Anillos de Sellado</h3>
-          <p>
-            Fabricación y recuperación de anillos para compresores y sistemas críticos.
-            Diseñados para operación continua durante todo el año.
-          </p>
-          <a href="/productos/anillos.html" class="btn-primary">
-            Ver producto
-          </a>
-        </article>
-
-        <!-- PRODUCTO 2 -->
-        <article class="product-card" data-animate data-delay="1">
-          <img src="/assets/img/productos/empaques.jpg" alt="Empaques industriales">
-          <h3>Empaques Industriales</h3>
-          <p>
-            Soluciones de sellado dinámico y estático para altas presiones,
-            temperaturas y ciclos anuales prolongados.
-          </p>
-          <a href="/productos/empaques.html" class="btn-primary">
-            Ver producto
-          </a>
-        </article>
-
-        <!-- PRODUCTO 3 -->
-        <article class="product-card" data-animate data-delay="2">
-          <img src="/assets/img/productos/rascadores.jpg" alt="Rascadores industriales">
-          <h3>Rascadores</h3>
-          <p>
-            Protección mecánica y limpieza de superficies en operación continua,
-            extendiendo la vida útil de los equipos.
-          </p>
-          <a href="/productos/rascadores.html" class="btn-primary">
-            Ver producto
-          </a>
-        </article>
-
-        <!-- PRODUCTO 4 -->
-        <article class="product-card" data-animate data-delay="3">
-          <img src="/assets/img/productos/valvulas.jpg" alt="Válvulas industriales">
-          <h3>Válvulas Industriales</h3>
-          <p>
-            Fabricación y reparación de válvulas para control, seguridad
-            y operación industrial durante todo el año.
-          </p>
-          <a href="/productos/valvulas.html" class="btn-primary">
-            Ver producto
-          </a>
-        </article>
-
+    <!-- Anillos -->
+    <article class="product-card">
+      <img src="../assets/img/producto-anillos.jpg" alt="Anillos industriales">
+      <div class="product-info">
+        <h3>Anillos</h3>
+        <p>Anillos de sellado fabricados con altos estándares de calidad para aplicaciones industriales exigentes.</p>
+        <a href="../productos/anillos.html" class="btn-primary">Ver más</a>
       </div>
-    </div>
+    </article>
+
+    <!-- Empaques -->
+    <article class="product-card">
+      <img src="../assets/img/producto-empaques.jpg" alt="Empaques industriales">
+      <div class="product-info">
+        <h3>Empaques</h3>
+        <p>Empaques industriales diseñados para garantizar hermeticidad, resistencia y durabilidad.</p>
+        <a href="../productos/empaques.html" class="btn-primary">Ver más</a>
+      </div>
+    </article>
+
+    <!-- Rascadores -->
+    <article class="product-card">
+      <img src="../assets/img/producto-rascadores.jpg" alt="Rascadores industriales">
+      <div class="product-info">
+        <h3>Rascadores</h3>
+        <p>Rascadores especializados para la protección de sellos y componentes mecánicos.</p>
+        <a href="../productos/rascadores.html" class="btn-primary">Ver más</a>
+      </div>
+    </article>
+
+    <!-- Válvulas -->
+    <article class="product-card">
+      <img src="../assets/img/producto-valvulas.jpg" alt="Válvulas industriales">
+      <div class="product-info">
+        <h3>Válvulas</h3>
+        <p>Válvulas industriales fabricadas y reacondicionadas bajo procesos controlados.</p>
+        <a href="../productos/valvulas.html" class="btn-primary">Ver más</a>
+      </div>
+    </article>
+
   </section>
 
-  <!-- ===============================
-       CTA FINAL
-  ================================ -->
-  <section class="products-cta">
-    <div class="section-inner text-center">
-      <h2 data-animate>¿Necesitas un producto a medida?</h2>
-      <p data-animate data-delay="1">
-        Diseñamos soluciones industriales personalizadas según tus requerimientos técnicos.
-      </p>
-      <a href="/contacto.html" class="btn-primary" data-animate data-delay="2">
-        Solicitar cotización
-      </a>
-    </div>
-  </section>
+  <footer id="footer"></footer>
 
-  <!-- ===============================
-       SCRIPTS
-  ================================ -->
-  <script src="/assets/js/inject-header.js"></script>
-  <script src="/assets/js/inject-footer.js"></script>
-  <script src="/assets/js/whatsapp.js"></script>
-  <script src="/assets/js/animations.js"></script>
-
+  <script src="../assets/js/inject-header.js"></script>
+  <script src="../assets/js/inject-footer.js"></script>
 </body>
 </html>

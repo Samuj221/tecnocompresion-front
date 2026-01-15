@@ -1,97 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Contacto | Tecno Compresión SAS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Tecno Compresión S.A.S</title>
 
-  <!-- CSS GLOBAL -->
-  <link rel="stylesheet" href="/assets/css/global.css">
-  <link rel="stylesheet" href="/assets/css/header.css">
-  <link rel="stylesheet" href="/assets/css/footer.css">
-  <link rel="stylesheet" href="/assets/css/whatsapp.css">
+  <!-- BASE -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
 
-  <!-- CSS PÁGINA -->
-  <link rel="stylesheet" href="/assets/css/contacto.css">
+  <!-- CONTACTO -->
+  <link rel="stylesheet" href="assets/css/contacto.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- FUENTE -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
+
+<header id="header"></header>
 
 <!-- HERO -->
 <section class="contact-hero">
-  <div class="contact-hero-content">
+  <div class="hero-content">
     <h1>Contáctanos</h1>
-    <p>Estamos listos para asesorarte en soluciones industriales</p>
+    <p>
+      Estamos listos para brindarte asesoría técnica y soluciones
+      industriales confiables.
+    </p>
   </div>
 </section>
 
 <!-- CONTACTO -->
 <section class="contact-section">
-  <div class="contact-grid">
+  <div class="contact-container">
 
     <!-- INFO -->
     <div class="contact-info">
       <h2>Información de Contacto</h2>
-
-      <p><strong>📍 Dirección:</strong><br>
-        Kra 112B / 64-17<br>
-        Bogotá D.C, Colombia
+      <p>
+        En <strong>Tecno Compresión S.A.S</strong> atendemos requerimientos
+        industriales con enfoque técnico, rapidez y confiabilidad.
       </p>
 
-      <p><strong>📞 Teléfono:</strong><br>
-        +57 300 000 0000
-      </p>
+      <ul>
+        <li><strong>📍 Ubicación:</strong> Kra 112B #64-17, Bogotá D.C.</li>
+        <li><strong>📞 Teléfono:</strong> +57 310 677 3516</li>
+        <li><strong>✉ Email:</strong> contacto@tecnocompresiones.com</li>
+      </ul>
 
-      <p><strong>✉️ Email:</strong><br>
-        contacto@tecnocompresion.com
-      </p>
+      <a
+        href="https://www.google.com/maps?q=4.7067556,-74.1358953"
+        target="_blank"
+        class="btn-map"
+      >
+        📍 Cómo llegar
+      </a>
 
-      <p><strong>🕒 Horario:</strong><br>
-        Lunes – Viernes<br>
-        8:00 AM – 5:00 PM
-      </p>
+      <a
+        href="https://wa.me/573000000000"
+        target="_blank"
+        class="btn-whatsapp"
+      >
+        Escríbenos por WhatsApp
+      </a>
     </div>
 
     <!-- FORM -->
-    <form class="contact-form">
-      <h2>Envíanos un mensaje</h2>
+    <div class="contact-form">
+      <h2>Solicita tu cotización</h2>
 
-      <input type="text" placeholder="Nombre completo" required>
-      <input type="email" placeholder="Correo electrónico" required>
-      <input type="tel" placeholder="Teléfono">
-      <textarea rows="5" placeholder="Describe tu necesidad"></textarea>
+      <form>
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="tel" placeholder="Teléfono">
+        <textarea placeholder="Describe tu requerimiento" rows="5" required></textarea>
 
-      <button type="submit">Enviar mensaje</button>
-    </form>
+        <button type="submit" class="btn-primary">
+          Enviar mensaje
+        </button>
+      </form>
+    </div>
 
   </div>
 </section>
 
-<!-- MAPA -->
-<section class="contact-map">
+<!-- MAP -->
+<section class="contact-map reveal">
   <iframe
-    src="https://www.google.com/maps?q=Kra%20112B%2064-17%20Bogota&t=&z=16&ie=UTF8&iwloc=&output=embed"
-    loading="lazy">
+    src="https://www.google.com/maps?q=4.7067556,-74.1358953&z=17&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
   </iframe>
 </section>
 
-<!-- CTA -->
-<section class="contact-cta">
-  <h2>¿Necesitas atención inmediata?</h2>
-  <a href="https://wa.me/573000000000" target="_blank" class="btn-primary">
-    Escríbenos por WhatsApp
-  </a>
-</section>
+<footer id="footer"></footer>
 
-<!-- JS -->
-<script src="/assets/js/inject-header.js"></script>
-<script src="/assets/js/inject-footer.js"></script>
-<script src="/assets/js/whatsapp.js"></script>
-<script src="/assets/js/animations.js"></script>
+<script src="assets/js/inject-header.js"></script>
+<script src="assets/js/inject-footer.js"></script>
+
+<!-- ANIMACIÓN SCROLL -->
+<script>
+  const reveal = document.querySelector('.reveal');
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        reveal.classList.add('active');
+      }
+    },
+    { threshold: 0.2 }
+  );
+
+  observer.observe(reveal);
+</script>
 
 </body>
 </html>

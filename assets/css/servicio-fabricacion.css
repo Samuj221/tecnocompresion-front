@@ -2,7 +2,7 @@
 .service-hero {
   height: 55vh;
   background: linear-gradient(rgba(0,0,0,.75), #020617),
-              url("../img/servicio-fabricacion.jpg") center/cover no-repeat;
+              url("../img/servicio-sandblasting.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,7 @@
 
 .service-hero h1 {
   color: #fff;
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
 }
 
 .service-hero p {
@@ -85,7 +85,7 @@
 }
 
 .benefits-list {
-  max-width: 650px;
+  max-width: 600px;
   margin: auto;
   list-style: none;
   padding: 0;
